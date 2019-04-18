@@ -23,11 +23,12 @@ Currently, this plugin provides two template fields:
 
 To install it, use pip:
 
-    pip install beets-lidarrfields
+    pip install beets-lidarr_fields
+
 or
 
-    git clone https://github.com/rafaelp-dev/beets-lidarrfields.git
-    cd beets-lidarrfields
+    git clone https://github.com/rafaelp-dev/beets-lidarr_fields.git
+    cd beets-lidarr_fields
     python setup.py install
 
 

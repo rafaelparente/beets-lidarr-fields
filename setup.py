@@ -12,10 +12,10 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'beets-lidarrfields'
+NAME = 'beets-lidarr_fields'
 DESCRIPTION = 'Beets plugin that defines some useful template fields to customize your path formats in a more lidarr (default) way.'
-URL = 'https://github.com/rafaelp-dev/beets-lidarrfields'
-EMAIL = 'rafap.dev@gmail.com'
+URL = 'https://github.com/rafaelp-dev/beets-lidarr_fields'
+EMAIL = 'rafaelp.dev@gmail.com'
 AUTHOR = 'Rafael Parente'
 REQUIRES_PYTHON = '>=3.4.0'
 VERSION = '1.0.0'
@@ -83,6 +83,8 @@ class UploadCommand(Command):
     self.status('Building Source and Wheel (universal) distribution…')
     os.system('{0} setup.py sdist bdist_wheel --universal'.format(sys.executable))
 
+    os.system('twine check dist/*')
+
     self.status('Uploading the package to PyPI via Twine…')
     os.system('twine upload dist/*')
 
@@ -119,7 +121,6 @@ setup(
     # Trove classifiers
     # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
     'Development Status :: 5 - Production/Stable',
-    'Environment :: Console',
     'Environment :: Plugins',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python',
