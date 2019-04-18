@@ -15,7 +15,7 @@ Currently, this plugin provides two template fields:
 * lidarralbum  
   Original album name, but with illegal characters replaced
   the same way Lidarr does it.
-  
+
 *Plugin only lightly tested by me. Use at your own risk!*
 
 **Install**
@@ -23,12 +23,12 @@ Currently, this plugin provides two template fields:
 
 To install it, use pip:
 
-    pip install beets-lidarr_fields
+    pip install beets-lidarr-fields
 
 or
 
-    git clone https://github.com/rafaelp-dev/beets-lidarr_fields.git
-    cd beets-lidarr_fields
+    git clone https://github.com/rafaelp-dev/beets-lidarr-fields.git
+    cd beets-lidarr-fields
     python setup.py install
 
 

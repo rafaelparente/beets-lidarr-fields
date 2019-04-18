@@ -12,9 +12,9 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'beets-lidarr_fields'
+NAME = 'beets-lidarr-fields'
 DESCRIPTION = 'Beets plugin that defines some useful template fields to customize your path formats in a more lidarr (default) way.'
-URL = 'https://github.com/rafaelp-dev/beets-lidarr_fields'
+URL = 'https://github.com/rafaelp-dev/beets-lidarr-fields'
 EMAIL = 'rafaelp.dev@gmail.com'
 AUTHOR = 'Rafael Parente'
 REQUIRES_PYTHON = '>=3.4.0'
