@@ -18,6 +18,7 @@ Currently, this plugin provides two template fields:
 
 *Plugin only lightly tested by me. Use at your own risk!*
 
+
 **Install**
 ===========
 
@@ -27,7 +28,7 @@ To install it, use pip:
 
 or
 
-    git clone https://github.com/rafaelp-dev/beets-lidarr-fields.git
+    git clone https://github.com/rafaelparente/beets-lidarr-fields.git
     cd beets-lidarr-fields
     python setup.py install
 
