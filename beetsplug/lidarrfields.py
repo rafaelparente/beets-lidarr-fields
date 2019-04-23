@@ -26,7 +26,7 @@ class LidarrFieldsPlugin(BeetsPlugin):
     return self.releasegroupartist
   
   def _tmpl_lidarralbum(self, item):
-    if item.mb_albumid != self.mb_albumid:
+    if item.mb_albumid != self.mb_albumid or item.singleton:
       rep = {'/': '+', ':': '-'}
       regexp = re.compile('|'.join(map(re.escape, rep)))
       self.lidarralbum = regexp.sub(lambda match: rep[match.group(0)], item.album)
