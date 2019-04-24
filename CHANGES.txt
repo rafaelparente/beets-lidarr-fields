@@ -1,1 +1,2 @@
+v.1.0.1, 2019-04-23 -- Fixes for singleton tracks.
 v1.0.0, 2019-04-18 -- Initial release.
