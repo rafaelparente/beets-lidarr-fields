@@ -1,2 +1,3 @@
+v1.0.3, 2019-05-03 -- Replaces '?' for '!' on lidarralbum.
 v1.0.2, 2019-04-23 -- Fixes for singleton tracks.
 v1.0.0, 2019-04-18 -- Initial release.
