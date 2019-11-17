@@ -1,3 +1,4 @@
+v1.0.5, 2019-11-17 -- Replaces (removes) '.' only at the end on lidarralbum.
 v1.0.4, 2019-11-17 -- Replaces '.' for '' (nothing) on lidarralbum.
 v1.0.3, 2019-05-03 -- Replaces '?' for '!' on lidarralbum.
 v1.0.2, 2019-04-23 -- Fixes for singleton tracks.

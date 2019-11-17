@@ -27,9 +27,15 @@ class LidarrFieldsPlugin(BeetsPlugin):
   
   def _tmpl_lidarralbum(self, item):
     if item.mb_albumid != self.mb_albumid or item.singleton:
-      rep = {'/': '+', ':': '-', '?': '!', '.': ''}
+      sp_rep = {'\\.$': ''}
+      sp_rep_clean = {'.': ''}
+      sp_regexp = re.compile('|'.join(sp_rep.keys()))
+      temp_lidarralbum = sp_regexp.sub(lambda match: sp_rep_clean[match.group(0)], item.album)
+      
+      rep = {'/': '+', ':': '-', '?': '!'}
       regexp = re.compile('|'.join(map(re.escape, rep)))
-      self.lidarralbum = regexp.sub(lambda match: rep[match.group(0)], item.album)
+      self.lidarralbum = regexp.sub(lambda match: rep[match.group(0)], temp_lidarralbum)
+      
       self.mb_albumid = item.mb_albumid
     
     return self.lidarralbum
