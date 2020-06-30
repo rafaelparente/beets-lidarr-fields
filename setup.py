@@ -18,7 +18,7 @@ URL = 'https://github.com/rafaelparente/beets-lidarr-fields'
 EMAIL = 'rafaelp.dev@gmail.com'
 AUTHOR = 'Rafael Parente'
 REQUIRES_PYTHON = '>=3.4.0'
-VERSION = '1.0.6.post3'
+VERSION = '1.1.0'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
