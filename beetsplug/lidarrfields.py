@@ -10,9 +10,12 @@ class LidarrFieldsPlugin(BeetsPlugin):
     self.releasegroupartist = None
     self.mb_albumid = None
     self.lidarralbum = None
+    self.mb_releasegroupid2 = None
+    self.audiodisctotal = None
     
     self.template_fields['releasegroupartist'] = self._tmpl_releasegroupartist
     self.template_fields['lidarralbum'] = self._tmpl_lidarralbum
+    self.template_fields['audiodisctotal'] = self._tmpl_audiodisctotal
 
   def _tmpl_releasegroupartist(self, item):
     if item.singleton:
@@ -39,3 +42,33 @@ class LidarrFieldsPlugin(BeetsPlugin):
       self.mb_albumid = item.mb_albumid
     
     return self.lidarralbum
+
+  def _tmpl_audiodisctotal(self, item):
+    if item.singleton:
+      return None
+    
+    if item.mb_releasegroupid != self.mb_releasegroupid2:
+      total = 0
+      
+      if item.disctotal == 1:
+        total = 1
+      else:
+        counted = []
+        
+        for albumitem in item.get_album().items():
+          if albumitem.disc in counted:
+            continue
+            
+          if albumitem.media not in ['Data CD', 'DVD', 'DVD-Video', 'Blu-ray', 'HD-DVD', 'VCD', 'SVCD', 'UMD', 'VHS']:
+            total += 1
+          
+          counted.append(albumitem.disc)
+          if len(counted) == item.disctotal:
+            break
+      
+      if total == 1:
+        return None
+      self.audiodisctotal = str(total).zfill(2)
+      self.mb_releasegroupid2 = item.mb_releasegroupid
+    
+    return self.audiodisctotal
