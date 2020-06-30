@@ -16,7 +16,7 @@ Currently, this plugin provides two template fields:
   Original album name, but with illegal characters replaced
   the same way Lidarr does it.
   
-* audiodisctotal
+* audiodisctotal  
   Similar to beet's 'disctotal' field, only it ignores video medias like
   Blu-ray, DVD, etc.
 
