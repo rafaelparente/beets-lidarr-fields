@@ -3,10 +3,10 @@
 
 This is a plugin for [Beets](https://github.com/beetbox/beets).
 It provides some template fields to customize your path formats in
-a more [Lidarr](https://github.com/lidarr/Lidarr) (default) way.
+a more [Lidarr](https://github.com/lidarr/Lidarr) way.
 It works faster than using the built-in inline plugin because it
 evaluates those fields only once per album (same value for all tracks).
-Currently, this plugin provides two template fields:
+Currently, this plugin provides three template fields:
 
 * releasegroupartist  
   It refers to the "Release Group Artist" (or the first one if multiple)
@@ -52,7 +52,9 @@ like it's explained in the [Beets Docs](https://beets.readthedocs.io/en/stable/r
 To make it look like Lidarr's default format, set it like:
 
     paths:
-        default: $releasegroupartist/$lidarralbum ($year)/$title
+        default: $releasegroupartist/$lidarralbum ($year)/%if{$audiodisctotal,$disc - }${track}. $title
+        
+    per_disc_numbering: yes
 
 Be aware that the ``aunique`` template function will
 (most likelly) **not** work on lidarralbum.

@@ -13,12 +13,12 @@ from setuptools import find_packages, setup, Command
 
 # Package meta-data.
 NAME = 'beets-lidarr-fields'
-DESCRIPTION = 'Beets plugin that defines some useful template fields to customize your path formats in a more lidarr (default) way.'
+DESCRIPTION = 'Beets plugin that defines some useful template fields to customize your path formats in a more lidarr way.'
 URL = 'https://github.com/rafaelparente/beets-lidarr-fields'
 EMAIL = 'rafaelp.dev@gmail.com'
 AUTHOR = 'Rafael Parente'
 REQUIRES_PYTHON = '>=3.4.0'
-VERSION = '1.0.6.post2'
+VERSION = '1.0.6.post3'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
