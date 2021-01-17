@@ -58,3 +58,22 @@ To make it look like Lidarr's default format, set it like:
 
 Be aware that the ``aunique`` template function will
 (most likelly) **not** work on lidarralbum.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/mod242"><img src="https://avatars.githubusercontent.com/u/40213799?v=3?s=100" width="100px;" alt=""/><br /><sub><b>mod242</b></sub></a><br /><a href="https://github.com/rafaelparente/beets-lidarr-fields/commits?author=mod242" title="Code">💻</a> </td>
+	<td align="center"><a href="https://github.com/DOFfactory"><img src="https://avatars0.githubusercontent.com/u/10846169?v=4?s=100" width="100px;" alt=""/><br /><sub><b>DOFfactory</b></sub></a><br /><a href="https://github.com/rafaelparente/beets-lidarr-fields/issues?q=author:DOFfactory" title="Bug reports">🐛</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
