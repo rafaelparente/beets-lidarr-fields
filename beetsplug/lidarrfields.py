@@ -22,11 +22,17 @@ class LidarrFieldsPlugin(BeetsPlugin):
       return None
     
     if item.mb_releasegroupid != self.mb_releasegroupid:
-      rel = musicbrainzngs.get_release_group_by_id(item.mb_releasegroupid, ['artist-credits'])
-      self.releasegroupartist = rel['release-group']['artist-credit'][0]['artist']['name']
-      self.mb_releasegroupid = item.mb_releasegroupid
-    
+      self._log.debug('Finding releasegrouparitst for ' + item.albumartist + ' - ' + item.album)
+      try:
+          rel = musicbrainzngs.get_release_group_by_id(item.mb_releasegroupid, ['artist-credits'])
+          self.releasegroupartist = rel['release-group']['artist-credit'][0]['artist']['name']
+          self.mb_releasegroupid = item.mb_releasegroupid
+      except:
+          self.releasegroupartist = item.albumartist
+          self.mb_releasegroupid = item.mb_releasegroupid
+          self._log.debug('No MB Credits found for ' + item.albumartist + ' - ' + item.album)
     return self.releasegroupartist
+
   
   def _tmpl_lidarralbum(self, item):
     if item.mb_albumid != self.mb_albumid or item.singleton:
